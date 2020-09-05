@@ -246,7 +246,7 @@ var cleanArray = removeDup(myArray);
 output.innerHTML = myArray + "<br>" + cleanArray;  // Displays old array and cleaned-up array underneath
 
 function removeDup(array) {
-  var newArray = [];  // Contains cleaned - up array that new entries can be put into
+  var newArray = [];  // Contains cleaned-up array that new entries can be put into
   var cleanObject = {};  // Holding Object - array values will be set as object keys; you can't add keys which already exist --> prevents duplicates!
   var prop = "";
 
@@ -257,7 +257,7 @@ function removeDup(array) {
   console.log(cleanObject);
   for (prop in cleanObject) {  // Loops through object
     // console.log(prop);
-    newArray.push(prop);  // Pushes object values into fresh array
+    newArray.push(prop);  // Pushes object keys into fresh array
   }
-  return newArray;  // Must return array containng object keys/props
+  return newArray;  // Must return array containng object keys
 }
