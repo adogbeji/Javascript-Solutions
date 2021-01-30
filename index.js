@@ -1,4 +1,6 @@
-// JS Course Solution Code
+// jshint esversion:6
+
+// JS Course 1 Solution Code
 
 // Code for Rock, Paper, SCissors Game
     var output = document.querySelectorAll("#text")[0];  //HTML that we'll be targetting
@@ -260,4 +262,25 @@ function removeDup(array) {
     newArray.push(prop);  // Pushes object keys into fresh array
   }
   return newArray;  // Must return array containng object keys
+}
+
+
+// Function that captures user input and display values on screen
+const values = [];  // Array to which we add user input values
+
+
+function addItem() {
+  const inputText = document.getElementById('item').value;  // Captures user input from HTML input tag
+  values.push(inputText);
+  outputItems();  /* Outputs values to HTML */
+
+  function outputItems() {
+    let html = '';
+    const output = document.getElementById('text');  /* Points to h1 tag */
+
+    for (let x = 0; x < values.length; x++) {
+      html += (x + 1) + '. ' + values[x] + '<br>';  /* Output index value + corresponding item for each iteration */
+    }
+    output.innerHTML = html;
+  }
 }
